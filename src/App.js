@@ -32,7 +32,7 @@ function App() {
       <BrowserRouter>
       <Navbar/>
         <Routes>
-          <Route path='/' element={<Home list={myList}/>}></Route>
+          <Route exact path='/' element={<Home list={myList}/>}></Route>
            <Route path='/search' element={<SearchMovies/>}></Route>
            
            <Route path='/movieDesc/:title/:id/:imgurl' element={<MovieDescription setlist={setMyList} addtolist={addToMyList} list={myList} />}></Route>
