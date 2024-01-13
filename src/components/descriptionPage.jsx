@@ -15,12 +15,15 @@ const MovieDescription = ({ addtolist, list, setlist }) => {
   const [tickflg, setTickflg] = useState();
   const [listText, setListText] = useState("Add to List");
   const trailerRef = useRef(null);
-
+  
+  const genreId = movie.genres && movie.genres.length > 0 ? movie.genres[0].id : null;
+  
   const movielist = {
     id: id,
     img: decodedImgUrl,
     title: title
   };
+  
   const handleAddToList = () => {
 
     
@@ -43,6 +46,7 @@ const MovieDescription = ({ addtolist, list, setlist }) => {
 
 
   useEffect(() => {
+    
     console.log("effect is running");
     if (trailerRef.current) {
       trailerRef.current.play();
@@ -132,7 +136,7 @@ const MovieDescription = ({ addtolist, list, setlist }) => {
 
       </div>
 
-      <SimilarMovies genreId={genre}/>
+     
 
 
       

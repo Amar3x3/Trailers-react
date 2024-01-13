@@ -199,7 +199,7 @@
     justify-content: space-between;
   }
   .sizebox{
-    height: 5rem;
+    height: 3rem;
   }
 
   
@@ -288,6 +288,21 @@
   .dateNruntime-cont{
     display: flex;
     flex-wrap: wrap;
+  }
+  .center-def-cont{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .big-def-title{
+    color: red;
+    font-size: 31px;
+    text-decoration: underline;
+  }
+  .dis-none{
+    display: none;
   }
 
 

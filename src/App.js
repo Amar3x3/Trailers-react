@@ -6,6 +6,7 @@ import Home from './components/home';
 import SearchMovies from './components/SearchMovies';
 import MovieDescription from './components/descriptionPage';
 import Navbar from './components/navbar';
+import DefaPage from './components/defaultpage';
 
 
 function App() {
@@ -31,12 +32,15 @@ function App() {
   
       <BrowserRouter>
       <Navbar/>
+      
+      
         <Routes>
-          <Route exact path='/home' element={<Home list={myList}/>}></Route>
+          <Route exact path='/' element={<Home list={myList}/>}></Route>
            <Route path='/search' element={<SearchMovies/>}></Route>
            
            <Route path='/movieDesc/:title/:id/:imgurl' element={<MovieDescription setlist={setMyList} addtolist={addToMyList} list={myList} />}></Route>
         </Routes>
+        <DefaPage/>
         <ScrollToTop/>
       </BrowserRouter>
       
